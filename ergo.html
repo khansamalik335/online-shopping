@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="YourName">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>CozyNest</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./index.html">
+<link rel="stylesheet" href="./gallery.html">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>CozyNest</title>
+    <style>
+        /* Fullscreen modal */
+        .modal-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-img {
+            cursor: pointer;
+            max-width: 100%;
+        }
+
+        .product-info {
+            margin-top: 20px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .product-description {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .review-stars i {
+            color: gold;
+        }
+
+        .review-summary {
+            margin-top: 20px;
+        }
+
+        .cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .cart-count {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+	<!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="index.html">COZYnest<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="active"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="about.html">About us</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact us</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+            
+    </nav>
+    <!-- End Header/Navigation -->
+
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Product Image -->
+                <img src="./images/4.jpg" style="width: 100%;height: 100%;" class="img-fluid product-img" alt="Product Image" id="product-image" data-toggle="modal" data-target="#fullscreenModal">
+            </div>
+
+            <div class="col-md-6">
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h2 class="product-title">Kruzo Aero chair</h2>
+                    <p class="product-price">35000</p>
+                    <p class="product-description">This Kruzo aero chair combines sleek design and comfort, perfect for any contemporary living room.</p>
+
+                    <!-- Reviews Section -->
+                    <div class="review-summary">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>4.5/5 (200 reviews)</p>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fullscreenModalLabel">Product Image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/1.jpg" class="img-fluid modal-image" alt="Product Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Add to Cart functionality
+        let cartCount = 0;
+
+        document.getElementById("add-to-cart").addEventListener("click", function() {
+            cartCount++;
+            document.getElementById("cart-count").textContent = cartCount;
+            alert("Added to Cart!");
+        });
+    </script>
+</body>
+</html>
